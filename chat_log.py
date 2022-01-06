@@ -10,13 +10,14 @@ from emoji import demojize
 from pynput.keyboard import Key, Controller as KeyboardController, KeyCode
 from pynput.mouse import Button, Controller as MouseController
 from dotenv import load_dotenv
+from dotenv import dotenv_values
+from pathlib import Path
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s — %(message)s',
                     datefmt='%Y-%m-%d_%H:%M:%S',
                     handlers=[logging.FileHandler('chat.log', encoding='utf-8')])
-#config = load_dotenv('.env')
-load_dotenv('env')
+config = list(dotenv_values('.env').values())[0]
 
 """
 Get token here: https://twitchapps.com/tmi/
@@ -25,7 +26,7 @@ Get token here: https://twitchapps.com/tmi/
 server = 'irc.chat.twitch.tv'
 port = 6667
 nickname = 'dily_dali'
-token = 'oauth:r0ousjk92mium3qltsgy9fibeh63e7'
+token = config
 channel = '#dily_dali'
 
 def hold_key(key, hold_time):
@@ -38,6 +39,8 @@ def main():
     keyboard = KeyboardController()
     mouse = MouseController
     key = Key
+    dotenv_path = Path(r'C:\Users\morge\Desktop\Twitch_Plays_Bot\.env')
+    load_dotenv(dotenv_path=dotenv_path)
     sock.connect((server, port))
     sock.send(f"PASS {token}\r\n".encode('utf-8'))
     sock.send(f"NICK {nickname}\r\n".encode('utf-8'))
