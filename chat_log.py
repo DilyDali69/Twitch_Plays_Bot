@@ -13,10 +13,6 @@ from dotenv import load_dotenv
 from dotenv import dotenv_values
 from pathlib import Path
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s — %(message)s',
-                    datefmt='%Y-%m-%d_%H:%M:%S',
-                    handlers=[logging.FileHandler('chat.log', encoding='utf-8')])
 config = list(dotenv_values('.env').values())[0]
 
 """
