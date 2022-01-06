@@ -62,7 +62,7 @@ def main():
                 
                 #if "jump" in resp:
                    # hold_key('a',1)
-                   # print("simulate key")
+                   # print("simulate key") #for testing purposes
                 
                 #press key look like this
                 
@@ -72,18 +72,15 @@ def main():
 
 
                 #############################
-                #####SONIC#AND#KNUCKLES######
-            
-                if "jump" in resp:
-                    keyboard.press(key.space)
+                ###general#chat#commands###
 
-                elif "left" in resp:
+                if "left" in resp:
                     keyboard.press(key.left)
 
                 elif "right" in resp:
                     keyboard.press(key.right)
 
-                elif "go" in resp:
+                elif "go" in resp or "run" in resp:
                     keyboard.press(key.up)
 
                 elif "back" in resp:
@@ -91,6 +88,15 @@ def main():
 
                 elif "enter" in resp:
                     keyboard.press(key.enter)
+                
+                elif "crouch" in resp:
+                    keyboard.press('c')
+
+                elif "interact" in resp:
+                    keyboard.press('e')
+
+                elif "jump" in resp:
+                    keyboard.press(key.space)
 
 
     except KeyboardInterrupt:
