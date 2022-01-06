@@ -66,6 +66,7 @@ def main():
                 
                 #press key look like this
                 
+                #a-z keys done like this
                 #elif "fart" in resp:
                     #keyboard.press('b')
 
@@ -74,19 +75,23 @@ def main():
                 #####SONIC#AND#KNUCKLES######
             
                 if "jump" in resp:
-                    keyboard.press('d')
+                    keyboard.press(key.space)
 
                 elif "left" in resp:
                     keyboard.press(key.left)
 
                 elif "right" in resp:
-                    keyboard.press()
+                    keyboard.press(key.right)
 
                 elif "go" in resp:
-                    keyboard.press()
+                    keyboard.press(key.up)
 
                 elif "back" in resp:
-                    keyboard.press()
+                    keyboard.press(key.down)
+
+                elif "enter" in resp:
+                    keyboard.press(key.enter)
+
 
     except KeyboardInterrupt:
         sock.close()
