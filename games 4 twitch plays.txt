@@ -1,0 +1,9 @@
+space pinball
+
+N64:
+bomberman
+mario party
+
+Sega:
+Sonic
+Doom
