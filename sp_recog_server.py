@@ -1,22 +1,18 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 import speech_recognition as sr
 import pyautogui
 from pynput.keyboard import Key, Controller as KeyboardController, KeyCode
 from pynput.mouse import Button, Controller as MouseController
+import ctypes
+from ctypes import wintypes
 
-hostName = "localhost"
-serverPort = 8080
 
 def main():
     keyboard = KeyboardController()
     mouse = MouseController()
-    class MyServer(BaseHTTPRequestHandler):
-        def do_GET(self):
+    class MyServer():
+        def do_GET():
             if __name__ == "__main__":        
-            
-                webServer = HTTPServer((hostName, serverPort), MyServer)
-                print("Server started http://%s:%s" % (hostName, serverPort))
 
                 with sr.Microphone() as source:
                         r = sr.Recognizer()
@@ -29,21 +25,115 @@ def main():
                             print("Text: "+ text)
                             
                             #if I say "die", spam run, teabag, and flashlight button#
-                            if "die" in text:
-                                print ("get fuckt")
-                                pyautogui.press('w')
-                                pyautogui.press('c')
-                                pyautogui.press('f')
-                                #keyboard.press('w', 'c', 'f')
-                                # keyboard.keyUp('w')
+                            if "s***" in text or "die" in text:
+                                print('get fuckt')
+                                keyboard.press('w')
+                                time.sleep(6)
+                                keyboard.release('w')
+                                time.sleep(.2)
                                 keyboard.press('c')
-                                # keyboard.keyUp('c')
+                                time.sleep(.2)
+                                keyboard.release('c')
+                                time.sleep(.2)
                                 keyboard.press('c')
-                                # keyboard.keyUp('c')
-                                keyboard.press('f')
-                                # keyboard.keyUp('f')
-                                keyboard.press('f')
-                                # keyboard.keyUp('f')
+                                time.sleep(.2)
+                                keyboard.release('c')
+                                time.sleep(.2)
+                                keyboard.press('c')
+                                time.sleep(.2)
+                                keyboard.release('c')
+                                time.sleep(.2)
+                                keyboard.press('c')
+                                time.sleep(.2)
+                                keyboard.release('c')
+                                print('idiot')
+
+                            if "stop" in text or "hi" in text or "high" in text:
+                                mouse.scroll(0,1)
+                                time.sleep(.5)
+                                keyboard.press('g')
+                                time.sleep(.5)
+                                keyboard.release('g')
+                                time.sleep(.5)
+                                mouse.scroll(0,1)
+                                time.sleep(.5)
+                                keyboard.press('g')
+                                time.sleep(.5)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                mouse.scroll(0,1)
+                                time.sleep(.3)
+                                keyboard.press('g')
+                                time.sleep(.3)
+                                keyboard.release('g')
+                                time.sleep(.3)
+                                print ('I hate you')
+
+                            if "happy" in text:
+                                print('no u')
+                                keyboard.press(Key.space)
+                                time.sleep(.5)
+                                keyboard.release(Key.space)
+                                time.sleep(.5)
+                                keyboard.press(Key.space)
+                                time.sleep(.5)
+                                keyboard.release(Key.space)
+                                time.sleep(.5)
+                                keyboard.press(Key.space)
+                                time.sleep(.5)
+                                keyboard.release(Key.space)
+                                time.sleep(.5)
+                                keyboard.press(Key.space)
+                                time.sleep(.5)
+                                keyboard.release(Key.space)
+                                time.sleep(.5)
+                                keyboard.press(Key.space)
+                                time.sleep(.5)
+                                keyboard.release(Key.space)
+                                print('ok srsly')
+                                
                             
                             # #elif "journal" in text:
                             #     print ("nurd")
@@ -56,11 +146,7 @@ def main():
                             print("Sorry, I did not get that")
                             main()
 
-                        try:
-                            webServer.serve_forever()
-                        except: webServer.server_close()
-                        print("Server stopped.")
-    MyServer.do_GET(BaseHTTPRequestHandler)
+    MyServer.do_GET()
     
 if __name__ == '__main__':
     main()
