@@ -57,8 +57,8 @@ def main():
                 #hold key look like this
                 
                 #if "jump" in resp:
-                   # hold_key('a',1)
-                   # print("simulate key") #for testing purposes
+                    # hold_key('a',1)
+                    # print("simulate key") #for testing purposes
                 
                 #press key look like this
                 

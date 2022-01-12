@@ -24,7 +24,7 @@ def main():
                             text = r.recognize_google(audio_text)
                             print("Text: "+ text)
                             
-                            #if I say "die", spam run, teabag, and flashlight button#
+                            #if I say "shit" or "die", spam run, teabag, run, teabag
                             if "s***" in text or "die" in text:
                                 print('Paula Deen: get buttered and get fuckt')
                                 keyboard.press('w')
@@ -68,10 +68,10 @@ def main():
                                 keyboard.release('c')
                                 print('Paula Deen: idiot')
 
+                            #if I say "stop" or "hi", systematically select
+                            #everything in my hotbar and throw it on the ground
                             if "stop" in text or "hi" in text or "high" in text:
                                 print ("Paula Deen: goodbye bitch")
-                                mouse.scroll(0,1)
-                                time.sleep(.5)
                                 keyboard.press('g')
                                 time.sleep(.5)
                                 keyboard.release('g')
@@ -132,7 +132,8 @@ def main():
                                 time.sleep(.5)
                                 print ('Paula Deen: I hate you')
 
-                            if "happy" in text:
+                            #if I say "sucks" or "chat", spam a thousand jumps#
+                            if "sucks" in text or "chat" in text:
                                 print('Paula Deen: no u')
                                 keyboard.press(Key.space)
                                 time.sleep(.5)
@@ -175,13 +176,6 @@ def main():
                                 keyboard.release(Key.space)
                                 print('Paula Deen: bless your very heart and soul')
                                 
-                            
-                            # #elif "journal" in text:
-                            #     print ("nurd")
-                            #     keyboard.press('j')
-                                #Event().wait(5)
-                                #time.sleep(5)
-                                #print ("just checkin")
                             main()
                         except:
                             print("Sorry, I did not get that")
