@@ -28,7 +28,7 @@ def main():
                         #if I say "shit" or "die", spam run, teabag, run, teabag
                         if "die" in text:
                             print('Paula Deen: get buttered and get fuckt')
-                            playsound('C:/Users/morge/Desktop/Twitch_Plays_Bot/assets/hahayousaiddie.mp3')
+                            playsound('./assets/hahayousaiddie.mp3')
                             keyboard.press('w')
                             time.sleep(6)
                             keyboard.release('w')
@@ -72,7 +72,7 @@ def main():
 
                         if "s***" in text:
                             print('Paula Deen: get buttered and get fuckt')
-                            playsound('C:/Users/morge/Desktop/Twitch_Plays_Bot/assets/hahayousaidshit.mp3')
+                            playsound('./assets/hahayousaidshit.mp3')
                             keyboard.press('w')
                             time.sleep(6)
                             keyboard.release('w')
@@ -118,7 +118,7 @@ def main():
                         #everything in my hotbar and throw it on the ground
                         if "stop" in text:
                             print ("Paula Deen: goodbye bitch")
-                            playsound('C:/Users/morge/Desktop/Twitch_Plays_Bot/assets/yousaidstopdummy.mp3')
+                            playsound('./assets/yousaidstopdummy.mp3')
                             keyboard.press('g')
                             time.sleep(.5)
                             keyboard.release('g')
@@ -179,9 +179,9 @@ def main():
                             time.sleep(.5)
                             print ('Paula Deen: I hate you')
 
-                        if "hi" in text or "high" in text:
+                        if "hi" in text:
                             print ("Paula Deen: goodbye bitch")
-                            playsound('C:/Users/morge/Desktop/Twitch_Plays_Bot/assets/yousaidhidummy.mp3')
+                            playsound('./assets/yousaidhidummy.mp3')
                             keyboard.press('g')
                             time.sleep(.5)
                             keyboard.release('g')
@@ -245,7 +245,7 @@ def main():
                         #if I say "sucks" or "chat", spam a thousand jumps#
                         if "sucks" in text:
                             print('Paula Deen: no u')
-                            playsound('C:/Users/morge/Desktop/Twitch_Plays_Bot/assets/yousuckimeanyousaidsucks.mp3')
+                            playsound('./assets/yousuckimeanyousaidsucks.mp3')
                             keyboard.press(Key.space)
                             time.sleep(.5)
                             keyboard.release(Key.space)
@@ -263,7 +263,7 @@ def main():
                             keyboard.release(Key.space)
                             time.sleep(.5)
                             keyboard.press(Key.space)
-                            time.sleep(.5)
+                            time.sleep(.5)  
                             keyboard.release(Key.space)
                             time.sleep(.5)
                             keyboard.press(Key.space)
@@ -289,7 +289,7 @@ def main():
 
                         if "chat" in text:
                             print('Paula Deen: no u')
-                            playsound('C:/Users/morge/Desktop/Twitch_Plays_Bot/assets/yousaidchatagain.mp3')
+                            playsound('./assets/yousaidchatagain.mp3')
                             keyboard.press(Key.space)
                             time.sleep(.5)
                             keyboard.release(Key.space)
@@ -307,7 +307,7 @@ def main():
                             keyboard.release(Key.space)
                             time.sleep(.5)
                             keyboard.press(Key.space)
-                            time.sleep(.5)
+                            time.sleep(.5)    
                             keyboard.release(Key.space)
                             time.sleep(.5)
                             keyboard.press(Key.space)
@@ -330,6 +330,15 @@ def main():
                             time.sleep(.5)
                             keyboard.release(Key.space)
                             print('Paula Deen: bless your very heart and soul')
+
+                        if "right" in text:
+                            print('Paula Deen: girl omg')
+                            playsound('./assets/yousaidrightletsgoo.mp3')
+                            keyboard.press('d')
+                            time.sleep(5)
+                            keyboard.release('d')
+                            print('Paula Deen: stop that')
+
                         main()
                     except:
                         print("Sorry, I did not get that")
